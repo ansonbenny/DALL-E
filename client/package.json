@@ -1,6 +1,7 @@
 {
   "name": "client",
   "private": true,
+  "author": "anson_benny",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
