@@ -3,7 +3,7 @@ import { logo } from './assets/index'
 import { CreatePost, Home } from './pages'
 import './App.css'
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <header className='w-full flex justify-between items-center bg-white
