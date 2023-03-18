@@ -1,0 +1,18 @@
+@keyframes loadingAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(355deg);
+    }
+}
+
+.spin {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid rgb(229 231 235);
+    border-top-color: #6469ff;
+    animation: loadingAnim 1s ease-in-out infinite;
+}
