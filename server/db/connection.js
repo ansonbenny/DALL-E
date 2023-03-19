@@ -8,7 +8,7 @@ export const connect = async (done) => {
     let dbName = 'dall_e'
 
     try {
-        let data = await MongoClient.connect(url)
+        let data = await MongoClient.connect(url, { useNewUrlParser: true })
         db = data.db(dbName)
         done()
     } catch (error) {
