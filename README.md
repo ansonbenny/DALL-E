@@ -19,13 +19,17 @@ Responsive Design
 <h5>.env values</h5>
 
 PORT = "5000"
+
 DB_URL = "ENTER_VALUE"
 
 OPENAI_API_KEY = "ENTER_VALUE"
+
 OPENAI_ORGANIZATION = "ENTER_VALUE"
 
 IMAGEKIT_PUBLIC_KEY = "ENTER_VALUE"
+
 IMAGEKIT_PRIVATE_KEY = "ENTER_VALUE"
+
 IMAGEKIT_URL_ENDPOINT = "ENTER_VALUE"
 
 <h5>to Start BackEnd in server dir type command in terminal npm start</h5>
