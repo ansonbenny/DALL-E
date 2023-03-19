@@ -5,7 +5,7 @@ import axios from 'axios'
 const Home = () => {
   const [Loading, setLoading] = useState(true)
   const [allPost, setAlllPosts] = useState(null)
-  const [searchText, setSearchText] = useState(null)
+  const [searchText, setSearchText] = useState('')
 
   const RenderCards = useCallback(({ data, title }) => {
     if (data?.length > 0) {

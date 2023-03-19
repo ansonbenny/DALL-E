@@ -70,7 +70,7 @@ router.post('/', async (req, res) => {
         })
 
         let postRes = await db.collection(collections.POST).insertOne({
-            _id: ObjectId(_id),
+            _id: new ObjectId(_id),
             prompt,
             name,
             photo: mediaRes.url
