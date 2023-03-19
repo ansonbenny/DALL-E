@@ -34,10 +34,13 @@ IMAGEKIT_PRIVATE_KEY = "ENTER_VALUE"
 IMAGEKIT_URL_ENDPOINT = "ENTER_VALUE"
 
 <h5>to Start BackEnd in server dir type command in terminal</h5>
+
 ```bash
   npm start
 ```
+
 <h5>to Start FrontEnd Develop mode in client dir type command in terminal</h5>
+
 ```bash
   npm run dev
 ```
