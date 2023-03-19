@@ -19,7 +19,7 @@ DALL-E clone usign mern stack
 
 To run this project, you will need to add the following environment variables to your .env file in server directory
 
-`PORT` :`5000`
+`PORT` : `5000`
 
 `DB_URL`
 
