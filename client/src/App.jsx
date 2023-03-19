@@ -1,7 +1,7 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import { logo } from './assets/index'
 import { CreatePost, Home } from './pages'
-import './App.css'
+import Error from './pages/404'
 
 const App = () => {
   return (
@@ -20,6 +20,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/create-post" element={<CreatePost />} />
+          <Route path='*' element={<Error />} />
         </Routes>
       </main>
 
