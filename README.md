@@ -1,7 +1,7 @@
 # DALL-E
 DALL-E clone usign mern stack
 
-<h5>Technology Used</h5>
+## Technology Used
 
 #vite #reactjs 
 #nodejs #expressjs #mongodb 
