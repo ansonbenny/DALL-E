@@ -7,12 +7,13 @@ DALL-E clone usign mern stack
 #nodejs #expressjs #mongodb 
 #openai #dalle #imagekit
 
-<h5>Features</h5>
 
-Create Image using prompt (Image details)
-Download Image
-Share Community for Visible everyone
-Responsive Design
+## Features
+
+- Create Image using prompt (Image details)
+- Download Image
+- Share Community for Visible everyone
+- Responsive Design
 
 <h5>To Work BackEnd Add .env in server folder</h5>
 
