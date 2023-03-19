@@ -8,10 +8,7 @@ import postRoute from './routes/post.js'
 
 dotenv.config()
 
-MongoConnect((error) => {
-    if (error) return console.log('DB error : ', error)
-    console.log('MongoDB connected')
-})
+
 
 const app = express()
 const port = process.env.PORT
@@ -22,6 +19,12 @@ app.use(express.json({ limit: '50mb' }))
 app.use('/api/v1/post', postRoute)
 app.use('/api/v1/dalle', dalleRoute)
 
-app.listen(port, () => {
-    console.log("DALL-E server started")
+MongoConnect((error) => {
+    if (error) return console.log('DB error : ', error)
+
+    console.log('MongoDB connected')
+
+    app.listen(port, () => {
+        console.log("DALL-E server started")
+    })
 })
