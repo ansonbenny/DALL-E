@@ -38,7 +38,7 @@ IMAGEKIT_URL_ENDPOINT = "ENTER_VALUE"
 
 ## Demo
 
-[Live](https://dalle-anson.netlify.app/n)
+[Live Link](https://dalle-anson.netlify.app/n)
 
 
 ## 🔗 Links
