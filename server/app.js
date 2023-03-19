@@ -8,8 +8,8 @@ import postRoute from './routes/post.js'
 
 dotenv.config()
 
-MongoConnect((e) => {
-    if (e) return console.log('DB error : ', e)
+MongoConnect((error) => {
+    if (error) return console.log('DB error : ', error)
     console.log('MongoDB connected')
 })
 

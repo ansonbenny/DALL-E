@@ -1,28 +1,79 @@
-import React, { useState } from 'react'
+import React, { useState, useReducer } from 'react'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 import { preview } from '../assets'
 import { getRandomPrompt } from '../utils'
 import { FormFeild, Loader } from '../components'
 
+const reducer = (loadStates, dispatch) => {
+  switch (dispatch.type) {
+    case 'loading':
+      return { loading: dispatch.status }
+    case 'generatingImg':
+      return { generatingImg: dispatch.status }
+    default:
+      return loadStates
+  }
+}
+
 const CreatePost = () => {
   const navigate = useNavigate()
+
   const [formData, setFormData] = useState({
     name: '',
     prompt: '',
     photo: ''
   })
 
-  const [generatingImg, setGeneratingImg] = useState(false)
+  const [loadStates, dispatch] = useReducer(reducer, {
+    generatingImg: false,
+    loading: false
+  })
 
-  const [loading, setLoading] = useState(false)
+  const generateImg = async () => {
+    if (formData.prompt) {
+      try {
+        dispatch({ type: 'generatingImg', status: true })
+        const response = await axios.post('http://localhost:5000/api/v1/dalle', {
+          prompt: formData.prompt
+        })
 
-  const generateImg = () => {
-
+        setFormData({
+          ...formData,
+          photo: `data:image/jpeg;base64,${response['data'].image}`
+        })
+      } catch (error) {
+        alert(error)
+      } finally {
+        dispatch({ type: 'generatingImg', status: false })
+      }
+    } else {
+      alert("Please enter the prompt")
+    }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    if (formData.prompt && formData.photo) {
+      if (formData.name) {
+        try {
+          dispatch({ type: 'loading', status: true })
+
+          let response = await axios.post('http://localhost:5000/api/v1/post', formData)
+
+          navigate('/')
+        } catch (error) {
+          alert(error)
+        } finally {
+          dispatch({ type: 'loading', status: false })
+        }
+      } else {
+        alert("Please enter name")
+      }
+    } else {
+      alert("Please enter the prompt and generate an image")
+    }
   }
 
   const handleChange = (e) => {
@@ -91,7 +142,7 @@ const CreatePost = () => {
             )}
 
             {
-              generatingImg && (
+              loadStates.generatingImg && (
                 <div className='absolute inset-0 z-0 flex justify-center items-center
                 bg-[rgba(0,0,0,0.5)] rounded-lg' >
                   <Loader />
@@ -110,7 +161,7 @@ const CreatePost = () => {
             text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           >
             {
-              generatingImg ? 'Generating...' : 'Generate'
+              loadStates.generateImg ? 'Generating...' : 'Generate'
             }
           </button>
         </div>
@@ -123,7 +174,7 @@ const CreatePost = () => {
             className='mt-3 text-white bg-[#6469ff] font-medium rounded-md
             text-sm w-full sm:w-auto px-5 py-2.5 text-center'
           >
-            {loading ? 'Loading..' : 'Share with the community'}
+            {loadStates.loading ? 'Sharing..' : 'Share with the community'}
           </button>
         </div>
       </form>

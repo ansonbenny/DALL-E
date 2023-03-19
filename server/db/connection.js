@@ -11,8 +11,8 @@ export const connect = async (done) => {
         let data = await MongoClient.connect(url)
         db = data.db(dbName)
         done()
-    } catch (e) {
-        done(e)
+    } catch (error) {
+        done(error)
     }
 }
 
