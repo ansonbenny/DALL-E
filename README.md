@@ -39,7 +39,7 @@ To run this project, you will need to add the following environment variables to
 Clone the project
 
 ```bash
-  git clone https://github.com/ansonbenny/DALL-E/
+  git clone https://github.com/ansonbenny/DALL-E.git
 ```
 
 <h5>To Start BackEnd</h5>
