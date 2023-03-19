@@ -33,7 +33,7 @@ IMAGEKIT_PRIVATE_KEY = "ENTER_VALUE"
 
 IMAGEKIT_URL_ENDPOINT = "ENTER_VALUE"
 
-## Run Locally BackEnd
+## Run Locally
 
 Clone the project
 
@@ -41,16 +41,12 @@ Clone the project
   git clone https://github.com/ansonbenny/DALL-E/
 ```
 
-Go to the project directory
-
-```bash
-  cd DALL-E
-```
+<h5>To Start BackEnd</h5>
 
 Go to the server directory
 
 ```bash
-  cd server
+  cd DALL-E/server
 ```
 
 Install dependencies
@@ -65,24 +61,12 @@ Start
   npm start
 ```
 
-## Run Locally FrontEnd
+<h5>To Start FrontEnd</h5>
 
-Clone the project
-
-```bash
-  git clone https://github.com/ansonbenny/DALL-E/
-```
-
-Go to the project directory
+Go to the client directory
 
 ```bash
-  cd DALL-E
-```
-
-Go to the server directory
-
-```bash
-  cd client
+  cd DALL-E/client
 ```
 
 Install dependencies
