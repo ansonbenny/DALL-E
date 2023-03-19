@@ -15,23 +15,24 @@ DALL-E clone usign mern stack
 - Share Community for Visible everyone
 - Responsive Design
 
-## To Work BackEnd Add .env in server folder
+## Environment Variables
 
-<h5>.env values</h5>
+To run this project, you will need to add the following environment variables to your .env file in server directory
 
-PORT = "5000"
+`PORT` :`5000`
 
-DB_URL = "ENTER_VALUE"
+`DB_URL`
 
-OPENAI_API_KEY = "ENTER_VALUE"
+`OPENAI_API_KEY`
 
-OPENAI_ORGANIZATION = "ENTER_VALUE"
+`OPENAI_ORGANIZATION`
 
-IMAGEKIT_PUBLIC_KEY = "ENTER_VALUE"
+`IMAGEKIT_PUBLIC_KEY`
 
-IMAGEKIT_PRIVATE_KEY = "ENTER_VALUE"
+`IMAGEKIT_PRIVATE_KEY`
 
-IMAGEKIT_URL_ENDPOINT = "ENTER_VALUE"
+`IMAGEKIT_URL_ENDPOINT`
+
 
 ## Run Locally
 
