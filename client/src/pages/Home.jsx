@@ -1,8 +1,9 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useLayoutEffect, useState } from 'react'
 import { Loader, Card, FormFeild } from '../components'
+import axios from 'axios'
 
 const Home = () => {
-  const [Loading, setLoading] = useState(false)
+  const [Loading, setLoading] = useState(true)
   const [allPost, setAlllPosts] = useState(null)
   const [searchText, setSearchText] = useState(null)
 
@@ -13,6 +14,50 @@ const Home = () => {
 
     return <h2 className='mt-5 font-bold text-[#6449ff] text-xl uppercase' >{title}</h2>
   }, [])
+
+  useLayoutEffect(() => {
+
+    const getPosts = async () => {
+      try {
+        setLoading(true)
+
+        let response = await axios.get('http://localhost:5000/api/v1/post')
+
+        setAlllPosts(response['data'].data)
+      } catch (error) {
+        alert(error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    getPosts()
+  }, [])
+
+  const handleSearch = (e) => {
+    setSearchText(e.target.value)
+
+    setLoading(true)
+
+    setTimeout(async () => {
+      try {
+
+        setAlllPosts([])
+
+        let response = await axios.get('http://localhost:5000/api/v1/post/search', {
+          params: {
+            search: e.target.value
+          }
+        })
+
+        setAlllPosts(response['data'].data)
+      } catch (error) {
+        alert(error)
+      } finally {
+        setLoading(false)
+      }
+    }, 1000)
+  }
 
   return (
     <section className='max-w-7x1 mx-auto' >
@@ -26,7 +71,14 @@ const Home = () => {
       </div>
 
       <div className="mt-16">
-        <FormFeild />
+        <FormFeild
+          labelName={'Search posts'}
+          handleChange={handleSearch}
+          value={searchText}
+          name="text"
+          placeholder={'Search posts'}
+          type={'text'}
+        />
       </div>
 
       <div className="mt-10">
@@ -50,7 +102,7 @@ const Home = () => {
                 {
                   searchText ? (
                     <RenderCards
-                      data={[]}
+                      data={allPost}
                       title={"No search results"}
                     />
                   ) : (

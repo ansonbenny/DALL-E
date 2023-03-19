@@ -34,17 +34,43 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/search', async (req, res) => {
+    try {
+        let posts = await db.collection(collections.POST).find({
+            prompt: {
+                $regex: req.query.search, $options: 'i'
+            }
+        }).toArray()
+
+        res.status(200).json({
+            status: 200,
+            message: 'Success',
+            data: posts
+        })
+    } catch (error) {
+        console.log(error)
+
+        res.status(500).json({
+            status: 500,
+            message: error
+        })
+    }
+})
+
 router.post('/', async (req, res) => {
 
     const { photo, prompt, name } = req.body
 
+    const _id = new ObjectId().toHexString()
+
     try {
         var mediaRes = await imagekit.upload({
             file: photo,
-            fileName: `${new ObjectId()}`
+            fileName: `${_id}`
         })
 
         let postRes = await db.collection(collections.POST).insertOne({
+            _id: ObjectId(_id),
             prompt,
             name,
             photo: mediaRes.url

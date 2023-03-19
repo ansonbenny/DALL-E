@@ -27,7 +27,7 @@ const FormFeild = ({ labelName, type, name, placeholder,
       </div>
 
       <input
-        type="text"
+        type={type}
         id={name}
         name={name}
         placeholder={placeholder}
