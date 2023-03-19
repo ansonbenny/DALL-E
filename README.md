@@ -33,17 +33,70 @@ IMAGEKIT_PRIVATE_KEY = "ENTER_VALUE"
 
 IMAGEKIT_URL_ENDPOINT = "ENTER_VALUE"
 
-<h5>To Start BackEnd , go to the server dir and type command in terminal</h5>
+## Run Locally BackEnd
+
+Clone the project
+
+```bash
+  git clone https://github.com/ansonbenny/DALL-E/
+```
+
+Go to the project directory
+
+```bash
+  cd DALL-E
+```
+
+Go to the server directory
+
+```bash
+  cd server
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start
 
 ```bash
   npm start
 ```
 
-<h5>To Start FrontEnd Develop mode, go to the client dir and type command in terminal</h5>
+## Run Locally FrontEnd
+
+Clone the project
+
+```bash
+  git clone https://github.com/ansonbenny/DALL-E/
+```
+
+Go to the project directory
+
+```bash
+  cd DALL-E
+```
+
+Go to the server directory
+
+```bash
+  cd client
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start
 
 ```bash
   npm run dev
 ```
+
 
 ## Demo
 
