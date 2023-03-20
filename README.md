@@ -3,8 +3,10 @@ DALL-E clone usign mern stack
 
 ## Technology Used
 
-#vite #reactjs 
+#vite #reactjs #tailwindcss 
+
 #nodejs #expressjs #mongodb 
+
 #openai #dalle #imagekit
 
 
