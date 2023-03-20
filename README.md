@@ -44,7 +44,7 @@ Clone the project
   git clone https://github.com/ansonbenny/DALL-E.git
 ```
 
-## To Start BackEnd
+##To Start BackEnd
 
 Go to the server directory
 
@@ -64,7 +64,7 @@ Start
   npm start
 ```
 
-<h5>To Start FrontEnd</h5>
+##To Start FrontEnd
 
 Go to the client directory
 
