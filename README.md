@@ -44,7 +44,7 @@ Clone the project
   git clone https://github.com/ansonbenny/DALL-E.git
 ```
 
-<h5>To Start BackEnd</h5>
+<h3>To Start BackEnd</h3>
 
 Go to the server directory
 
