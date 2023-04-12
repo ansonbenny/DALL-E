@@ -87,7 +87,7 @@ Start
 
 ## Demo
 
-[Live](https://dalle-anson.netlify.app/n)
+[Live](https://dalle-anson.netlify.app)
 
 
 ## 🔗 Links
