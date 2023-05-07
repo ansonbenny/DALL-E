@@ -100,6 +100,16 @@ Start
 
 [Live](https://dalle-anson.netlify.app)
 
+https://user-images.githubusercontent.com/94070164/236692420-51d93cf6-a224-4020-b6c5-cbb5629c0ac3.mp4
+
+![dall-e1](https://user-images.githubusercontent.com/94070164/236692443-afabdeee-9ba7-45f0-a01d-da803ee4446e.png)
+
+![dall-e2](https://user-images.githubusercontent.com/94070164/236692451-be2fe3a7-4217-449e-aef0-25af765cf61d.png)
+
+![da;;-e3](https://user-images.githubusercontent.com/94070164/236692454-77016610-3213-4f60-8cb7-0a41a504c52a.png)
+
+![dall-e4](https://user-images.githubusercontent.com/94070164/236692460-9a1f691c-a428-4dff-9bbc-00ea10ae978b.png)
+
 
 ## 🔗 Links
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anson-benny-502961238/)
