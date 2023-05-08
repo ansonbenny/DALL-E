@@ -18,6 +18,8 @@ Make sure you have installed all of the following prerequisites on your developm
 
 #nodejs #expressjs #mongodb 
 
+#javascript
+
 #openai #dalle #imagekit
 
 
