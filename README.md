@@ -1,10 +1,21 @@
 # DALL-E
-This clone is made with MERN and uses OpenAI API.
+This is made with MERN and uses OpenAI API.
+
+This is a clone of Dall-E of OpenAi, Its used to
+generate digital images from prompts (natural language
+descriptions) .
+
+## Features
+
+- Create Image using prompt (Image details)
+- Download Image
+- Share Community for Visible everyone
+- Responsive Design
+
+## Prerequisites
 
 - get your OpenAi api key from https://openai.com/api/
 - get your imagekit api key from https://imagekit.io/
-
-## Prerequisites
 
 Make sure you have installed all of the following prerequisites on your development machine:
 
@@ -21,14 +32,6 @@ Make sure you have installed all of the following prerequisites on your developm
 #javascript
 
 #openai #dalle #imagekit
-
-
-## Features
-
-- Create Image using prompt (Image details)
-- Download Image
-- Share Community for Visible everyone
-- Responsive Design
 
 ## Environment Variables
 
